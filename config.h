@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "iosevka:pixelsize=15:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -16,10 +16,10 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
-char *utmp = NULL;
+static char *shell = "/usr/bin/zsh";
+char *utmp = "scroll";
 /* scroll program: to enable use a string like "scroll" */
-char *scroll = NULL;
+char *scroll = "/usr/local/bin/scroll";
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
@@ -117,13 +117,12 @@ static const char *colorname[] = {
 
 	[255] = 0,
 
-	/* more colors can be added after 255 to use with DefaultXX */
+	/* more colors can be added after 255 to use with DefaultXX  */
 	"#cccccc",
 	"#555555",
 	"gray90", /* default foreground colour */
 	"black", /* default background colour */
 };
-
 
 /*
  * Default colors (colorname index)
